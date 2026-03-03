@@ -1,0 +1,13 @@
+backend/.env
+.env
+
+backend/node_modules/
+node_modules/
+
+docker-compose.override.yml
+
+backend/dist/
+
+
+frontend/node_modules/
+frontend/dist/
