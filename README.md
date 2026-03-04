@@ -12,23 +12,21 @@ A company incorporation tool consisting of a backend API and a frontend multi-st
 - PostgreSQL (if running locally)
 - Docker and Docker Compose (for backend containerization)
 
-## Quick Start (Docker)
+### Quick Start
 
-```bash
+```
 # Clone and run
 git clone https://github.com/shreyaupd/Incorporation_Tool.git
 cd Incorporation_Tool
 # Start the backend and database
 docker-compose up -d
 # Create database tables
-docker exec -it postgres_db psql -U postgres -d corporationdb -c"
-
+docker exec -it postgres_db psql -U postgres -d corporationdb -c "
 CREATE TABLE company (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     number_of_shareholder INT NOT NULL,
     total_capital NUMERIC NOT NULL,
-    status VARCHAR(15) DEFAULT 'draft',
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -40,36 +38,18 @@ CREATE TABLE shareholder (
     nationality VARCHAR(100) NOT NULL
 );
 "
+##Backend start verify
+docker ps
 
+##Frontend setup
+(In new Powershell)
+cd frontend
+npm install
+npm run dev
 
 # Access:
 # Frontend: http://localhost:5173
 # Backend API: http://localhost:3000
-
-## Manual Setup
-
-### Backend
-```bash
-cd backend
-npm install
-cp .env   
-npm run dev
-```
-
-### Frontend
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-### Database
-```bash
-# Create database
-createdb corporationdb
-
-# Run migrations
-psql -d corporationdb -f database/schema.sql
 ```
 
 ## API EndPoints
