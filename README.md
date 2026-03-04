@@ -47,9 +47,20 @@ cd frontend
 npm install
 npm run dev
 
-# Access:
-# Frontend: http://localhost:5173
-# Backend API: http://localhost:3000
+## If Backend not responding
+
+# Check if containers are running
+docker ps
+
+# View backend logs
+docker logs node_backend
+
+# Restart backend if needed
+docker-compose down
+docker-compose up --build -d
+
+# Check logs
+docker logs -f node_backend
 ```
 
 ## API EndPoints
