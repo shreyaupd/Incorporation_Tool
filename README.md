@@ -17,7 +17,7 @@ A company incorporation tool consisting of a backend API and a frontend multi-st
 ```bash
 # Clone and run
 git clone https://github.com/shreyaupd/Incorporation_Tool.git
-cd Corporation
+cd Incorporation_Tool
 # Start the backend and database
 docker-compose up -d
 # Create database tables
