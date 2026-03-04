@@ -49,14 +49,6 @@ const AdminPage = () => {
                   Company ID: #{company.id}
                 </p>
               </div>
-              <span
-                className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase border ${company.status === 'completed'
-                  ? 'bg-green-50 text-green-700 border-green-100'
-                  : 'bg-blue-50 text-blue-700 border-blue-100'
-                  }`}
-              >
-                {company.status}
-              </span>
             </div>
 
             <div className="flex flex-wrap gap-6 p-5 bg-slate-50 rounded-xl border border-slate-100">

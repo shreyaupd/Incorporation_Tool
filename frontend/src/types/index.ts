@@ -16,7 +16,6 @@ export interface Company {
     name: string;                    
     number_of_shareholder: number;    
     total_capital: number;            
-    status: string;
     created_at: string;
     shareholders?: Array<{
         id: number;
